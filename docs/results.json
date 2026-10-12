@@ -1,0 +1,1956 @@
+{
+  "meta": {
+    "model": "vader",
+    "n_reviews": 607,
+    "synthetic": false,
+    "min_n": 30,
+    "min_theme_n": 5,
+    "generated": "2026-10-12",
+    "pos_threshold": 0.05,
+    "neg_threshold": -0.05,
+    "date_range": [
+      "2021-07-26",
+      "2026-10-10"
+    ]
+  },
+  "brands": [
+    {
+      "brand": "Nuuly",
+      "reviews": 50,
+      "mean_sentiment": 0.7169,
+      "ci_low": 0.6,
+      "ci_high": 0.8169,
+      "pct_positive": 92.0,
+      "pct_neutral": 0.0,
+      "pct_negative": 8.0,
+      "net_sentiment": 84.0,
+      "status": "ok",
+      "avg_rating": 4.34,
+      "rated_reviews": 50,
+      "spearman_vs_rating": 0.4201
+    },
+    {
+      "brand": "BNTO",
+      "reviews": 57,
+      "mean_sentiment": 0.6685,
+      "ci_low": 0.5623,
+      "ci_high": 0.7749,
+      "pct_positive": 87.7193,
+      "pct_neutral": 1.7544,
+      "pct_negative": 10.5263,
+      "net_sentiment": 77.193,
+      "status": "ok",
+      "avg_rating": 3.9474,
+      "rated_reviews": 57,
+      "spearman_vs_rating": 0.4997
+    },
+    {
+      "brand": "Rent the Runway",
+      "reviews": 500,
+      "mean_sentiment": 0.1668,
+      "ci_low": 0.1064,
+      "ci_high": 0.228,
+      "pct_positive": 54.0,
+      "pct_neutral": 6.8,
+      "pct_negative": 39.2,
+      "net_sentiment": 14.8,
+      "status": "ok",
+      "avg_rating": 2.566,
+      "rated_reviews": 500,
+      "spearman_vs_rating": 0.6077
+    }
+  ],
+  "themes": [
+    "fit_sizing",
+    "condition",
+    "delivery",
+    "selection",
+    "pricing",
+    "subscription",
+    "service",
+    "app_website"
+  ],
+  "matrix": [
+    {
+      "brand": "BNTO",
+      "theme": "app_website",
+      "mentions": 57,
+      "mean_sentiment": 0.3284,
+      "ci_low": 0.2259,
+      "ci_high": 0.432,
+      "pct_negative": 12.2807,
+      "low_n": false
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "app_website",
+      "mentions": 31,
+      "mean_sentiment": 0.0831,
+      "ci_low": -0.0451,
+      "ci_high": 0.2166,
+      "pct_negative": 32.2581,
+      "low_n": false
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "app_website",
+      "mentions": 386,
+      "mean_sentiment": 0.0503,
+      "ci_low": 0.009,
+      "ci_high": 0.0916,
+      "pct_negative": 27.7202,
+      "low_n": false
+    },
+    {
+      "brand": "BNTO",
+      "theme": "condition",
+      "mentions": 13,
+      "mean_sentiment": 0.5073,
+      "ci_low": 0.3419,
+      "ci_high": 0.6693,
+      "pct_negative": 0.0,
+      "low_n": false
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "condition",
+      "mentions": 14,
+      "mean_sentiment": 0.1549,
+      "ci_low": -0.0409,
+      "ci_high": 0.3402,
+      "pct_negative": 14.2857,
+      "low_n": false
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "condition",
+      "mentions": 149,
+      "mean_sentiment": -0.0467,
+      "ci_low": -0.1246,
+      "ci_high": 0.0275,
+      "pct_negative": 44.2953,
+      "low_n": false
+    },
+    {
+      "brand": "BNTO",
+      "theme": "delivery",
+      "mentions": 28,
+      "mean_sentiment": 0.3439,
+      "ci_low": 0.2256,
+      "ci_high": 0.465,
+      "pct_negative": 3.5714,
+      "low_n": false
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "delivery",
+      "mentions": 6,
+      "mean_sentiment": 0.2117,
+      "ci_low": 0.0,
+      "ci_high": 0.5219,
+      "pct_negative": 0.0,
+      "low_n": false
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "delivery",
+      "mentions": 269,
+      "mean_sentiment": -0.0254,
+      "ci_low": -0.075,
+      "ci_high": 0.0199,
+      "pct_negative": 37.1747,
+      "low_n": false
+    },
+    {
+      "brand": "BNTO",
+      "theme": "fit_sizing",
+      "mentions": 5,
+      "mean_sentiment": 0.6351,
+      "ci_low": 0.401,
+      "ci_high": 0.8254,
+      "pct_negative": 0.0,
+      "low_n": false
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "fit_sizing",
+      "mentions": 20,
+      "mean_sentiment": 0.4485,
+      "ci_low": 0.2965,
+      "ci_high": 0.6235,
+      "pct_negative": 5.0,
+      "low_n": false
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "fit_sizing",
+      "mentions": 136,
+      "mean_sentiment": 0.2515,
+      "ci_low": 0.1785,
+      "ci_high": 0.3251,
+      "pct_negative": 16.9118,
+      "low_n": false
+    },
+    {
+      "brand": "BNTO",
+      "theme": "pricing",
+      "mentions": 19,
+      "mean_sentiment": 0.3953,
+      "ci_low": 0.2128,
+      "ci_high": 0.5534,
+      "pct_negative": 10.5263,
+      "low_n": false
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "pricing",
+      "mentions": 5,
+      "mean_sentiment": 0.2803,
+      "ci_low": 0.1362,
+      "ci_high": 0.3983,
+      "pct_negative": 0.0,
+      "low_n": false
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "pricing",
+      "mentions": 129,
+      "mean_sentiment": 0.0495,
+      "ci_low": -0.0195,
+      "ci_high": 0.1159,
+      "pct_negative": 37.2093,
+      "low_n": false
+    },
+    {
+      "brand": "BNTO",
+      "theme": "selection",
+      "mentions": 35,
+      "mean_sentiment": 0.4914,
+      "ci_low": 0.3804,
+      "ci_high": 0.594,
+      "pct_negative": 2.8571,
+      "low_n": false
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "selection",
+      "mentions": 16,
+      "mean_sentiment": 0.3728,
+      "ci_low": 0.1609,
+      "ci_high": 0.5555,
+      "pct_negative": 12.5,
+      "low_n": false
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "selection",
+      "mentions": 228,
+      "mean_sentiment": 0.1624,
+      "ci_low": 0.1029,
+      "ci_high": 0.2209,
+      "pct_negative": 28.5088,
+      "low_n": false
+    },
+    {
+      "brand": "BNTO",
+      "theme": "service",
+      "mentions": 9,
+      "mean_sentiment": 0.658,
+      "ci_low": 0.4453,
+      "ci_high": 0.8217,
+      "pct_negative": 0.0,
+      "low_n": false
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "service",
+      "mentions": 10,
+      "mean_sentiment": 0.5857,
+      "ci_low": 0.3891,
+      "ci_high": 0.7617,
+      "pct_negative": 10.0,
+      "low_n": false
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "service",
+      "mentions": 209,
+      "mean_sentiment": 0.0342,
+      "ci_low": -0.0394,
+      "ci_high": 0.101,
+      "pct_negative": 36.8421,
+      "low_n": false
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "subscription",
+      "mentions": 3,
+      "mean_sentiment": 0.739,
+      "ci_low": 0.4404,
+      "ci_high": 0.899,
+      "pct_negative": 0.0,
+      "low_n": true
+    },
+    {
+      "brand": "BNTO",
+      "theme": "subscription",
+      "mentions": 23,
+      "mean_sentiment": 0.4265,
+      "ci_low": 0.245,
+      "ci_high": 0.5986,
+      "pct_negative": 13.0435,
+      "low_n": false
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "subscription",
+      "mentions": 323,
+      "mean_sentiment": -0.0189,
+      "ci_low": -0.0644,
+      "ci_high": 0.0243,
+      "pct_negative": 39.9381,
+      "low_n": false
+    }
+  ],
+  "pairs": [
+    {
+      "brand_a": "BNTO",
+      "brand_b": "Nuuly",
+      "n_a": 57,
+      "n_b": 50,
+      "mean_diff_a_minus_b": -0.0485,
+      "ci_low": -0.1997,
+      "ci_high": 0.1153,
+      "p_value": 0.5535,
+      "cliffs_delta": 0.0098,
+      "effect_size": "negligible",
+      "p_holm": 0.5535,
+      "verdict": "no clear difference"
+    },
+    {
+      "brand_a": "BNTO",
+      "brand_b": "Rent the Runway",
+      "n_a": 57,
+      "n_b": 500,
+      "mean_diff_a_minus_b": 0.5016,
+      "ci_low": 0.3773,
+      "ci_high": 0.6278,
+      "p_value": 0.0002,
+      "cliffs_delta": 0.4475,
+      "effect_size": "medium",
+      "p_holm": 0.0006,
+      "verdict": "BNTO higher (Holm p<0.05)"
+    },
+    {
+      "brand_a": "Nuuly",
+      "brand_b": "Rent the Runway",
+      "n_a": 50,
+      "n_b": 500,
+      "mean_diff_a_minus_b": 0.5501,
+      "ci_low": 0.4233,
+      "ci_high": 0.6692,
+      "p_value": 0.0002,
+      "cliffs_delta": 0.4638,
+      "effect_size": "medium",
+      "p_holm": 0.0006,
+      "verdict": "Nuuly higher (Holm p<0.05)"
+    }
+  ],
+  "sources": [
+    {
+      "brand": "BNTO",
+      "source": "apple-app-store",
+      "reviews": 57
+    },
+    {
+      "brand": "Nuuly",
+      "source": "apple-app-store",
+      "reviews": 50
+    },
+    {
+      "brand": "Rent the Runway",
+      "source": "apple-app-store",
+      "reviews": 500
+    }
+  ],
+  "trend": [
+    {
+      "brand": "BNTO",
+      "month": "2024-09",
+      "mean": 0.9618,
+      "n": 2
+    },
+    {
+      "brand": "BNTO",
+      "month": "2024-11",
+      "mean": 0.0,
+      "n": 1
+    },
+    {
+      "brand": "BNTO",
+      "month": "2024-12",
+      "mean": 0.9919,
+      "n": 1
+    },
+    {
+      "brand": "BNTO",
+      "month": "2025-01",
+      "mean": 0.8966,
+      "n": 1
+    },
+    {
+      "brand": "BNTO",
+      "month": "2025-09",
+      "mean": 0.0772,
+      "n": 1
+    },
+    {
+      "brand": "BNTO",
+      "month": "2025-10",
+      "mean": 0.5329,
+      "n": 8
+    },
+    {
+      "brand": "BNTO",
+      "month": "2025-11",
+      "mean": 0.2194,
+      "n": 5
+    },
+    {
+      "brand": "BNTO",
+      "month": "2025-12",
+      "mean": 0.8853,
+      "n": 5
+    },
+    {
+      "brand": "BNTO",
+      "month": "2026-01",
+      "mean": 0.7869,
+      "n": 16
+    },
+    {
+      "brand": "BNTO",
+      "month": "2026-02",
+      "mean": 0.7648,
+      "n": 8
+    },
+    {
+      "brand": "BNTO",
+      "month": "2026-03",
+      "mean": 0.5983,
+      "n": 1
+    },
+    {
+      "brand": "BNTO",
+      "month": "2026-04",
+      "mean": -0.0803,
+      "n": 1
+    },
+    {
+      "brand": "BNTO",
+      "month": "2026-06",
+      "mean": 0.4127,
+      "n": 2
+    },
+    {
+      "brand": "BNTO",
+      "month": "2026-07",
+      "mean": 0.8655,
+      "n": 1
+    },
+    {
+      "brand": "BNTO",
+      "month": "2026-09",
+      "mean": 0.8775,
+      "n": 4
+    },
+    {
+      "brand": "Nuuly",
+      "month": "2026-05",
+      "mean": 0.4425,
+      "n": 4
+    },
+    {
+      "brand": "Nuuly",
+      "month": "2026-06",
+      "mean": 0.9345,
+      "n": 2
+    },
+    {
+      "brand": "Nuuly",
+      "month": "2026-07",
+      "mean": 0.2563,
+      "n": 4
+    },
+    {
+      "brand": "Nuuly",
+      "month": "2026-08",
+      "mean": 0.5972,
+      "n": 5
+    },
+    {
+      "brand": "Nuuly",
+      "month": "2026-09",
+      "mean": 0.85,
+      "n": 23
+    },
+    {
+      "brand": "Nuuly",
+      "month": "2026-10",
+      "mean": 0.7204,
+      "n": 12
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2021-07",
+      "mean": 0.1043,
+      "n": 5
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2021-08",
+      "mean": 0.2085,
+      "n": 12
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2021-09",
+      "mean": -0.2266,
+      "n": 22
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2021-10",
+      "mean": -0.11,
+      "n": 9
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2021-11",
+      "mean": 0.2644,
+      "n": 14
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2021-12",
+      "mean": 0.1082,
+      "n": 13
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2022-01",
+      "mean": 0.4832,
+      "n": 9
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2022-02",
+      "mean": 0.2364,
+      "n": 14
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2022-03",
+      "mean": 0.2474,
+      "n": 13
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2022-04",
+      "mean": -0.3982,
+      "n": 14
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2022-05",
+      "mean": 0.3294,
+      "n": 12
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2022-06",
+      "mean": 0.263,
+      "n": 16
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2022-07",
+      "mean": 0.1734,
+      "n": 14
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2022-08",
+      "mean": 0.2726,
+      "n": 9
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2022-09",
+      "mean": 0.3069,
+      "n": 3
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2022-10",
+      "mean": 0.0866,
+      "n": 9
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2022-11",
+      "mean": -0.7553,
+      "n": 3
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2023-01",
+      "mean": 0.4196,
+      "n": 23
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2023-02",
+      "mean": -0.0052,
+      "n": 15
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2023-03",
+      "mean": 0.3142,
+      "n": 14
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2023-04",
+      "mean": -0.2027,
+      "n": 13
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2023-05",
+      "mean": 0.2264,
+      "n": 15
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2023-06",
+      "mean": 0.2497,
+      "n": 15
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2023-07",
+      "mean": 0.6392,
+      "n": 10
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2023-08",
+      "mean": -0.1791,
+      "n": 6
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2023-09",
+      "mean": -0.3146,
+      "n": 4
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2023-10",
+      "mean": 0.295,
+      "n": 6
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2023-11",
+      "mean": 0.1017,
+      "n": 6
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2023-12",
+      "mean": 0.6881,
+      "n": 6
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2024-01",
+      "mean": 0.6292,
+      "n": 7
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2024-02",
+      "mean": 0.1556,
+      "n": 7
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2024-03",
+      "mean": 0.0851,
+      "n": 11
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2024-04",
+      "mean": 0.2184,
+      "n": 14
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2024-05",
+      "mean": 0.1969,
+      "n": 13
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2024-06",
+      "mean": -0.0103,
+      "n": 10
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2024-07",
+      "mean": 0.3153,
+      "n": 10
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2024-08",
+      "mean": 0.3228,
+      "n": 9
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2024-09",
+      "mean": 0.1018,
+      "n": 8
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2024-10",
+      "mean": 0.1606,
+      "n": 5
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2024-11",
+      "mean": 0.3965,
+      "n": 7
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2024-12",
+      "mean": -0.1477,
+      "n": 7
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2025-01",
+      "mean": 0.0945,
+      "n": 8
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2025-02",
+      "mean": 0.6512,
+      "n": 3
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2025-03",
+      "mean": 0.4363,
+      "n": 4
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2025-04",
+      "mean": 0.3832,
+      "n": 4
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2025-05",
+      "mean": 0.2587,
+      "n": 5
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2025-06",
+      "mean": 0.6262,
+      "n": 2
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2025-07",
+      "mean": 0.9134,
+      "n": 1
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2025-08",
+      "mean": 0.0943,
+      "n": 5
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2025-09",
+      "mean": -0.0968,
+      "n": 4
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2025-11",
+      "mean": 0.1519,
+      "n": 3
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2025-12",
+      "mean": 0.5386,
+      "n": 3
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2026-01",
+      "mean": 0.1954,
+      "n": 5
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2026-02",
+      "mean": -0.276,
+      "n": 2
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2026-03",
+      "mean": -0.3024,
+      "n": 2
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2026-04",
+      "mean": 0.214,
+      "n": 2
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2026-05",
+      "mean": -0.4243,
+      "n": 3
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2026-06",
+      "mean": 0.2193,
+      "n": 2
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2026-07",
+      "mean": 0.2423,
+      "n": 3
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2026-08",
+      "mean": 0.1345,
+      "n": 3
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2026-09",
+      "mean": 0.4418,
+      "n": 3
+    },
+    {
+      "brand": "Rent the Runway",
+      "month": "2026-10",
+      "mean": -0.3943,
+      "n": 1
+    }
+  ],
+  "shared_weak": [],
+  "validation": {
+    "spearman_vs_rating_overall": 0.645
+  },
+  "sentences": [
+    {
+      "brand": "BNTO",
+      "theme": "app_website",
+      "score": -0.4902,
+      "text": "For BNTO\u2019s premium cost, the app is really lacking :("
+    },
+    {
+      "brand": "BNTO",
+      "theme": "app_website",
+      "score": -0.4767,
+      "text": "Not to mention the app is a terrible user experience."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "app_website",
+      "score": -0.4497,
+      "text": "App feedback: I often scroll through items to add several to my wishlist, but hearting an item opens the capsule drawer and interrupts browsing."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "app_website",
+      "score": -0.4215,
+      "text": "Sometimes I notice freezing, glitching and a general lag."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "app_website",
+      "score": 0.9233,
+      "text": "The app is also extremely user friendly, so easy to navigate and save items, they even have a feature that helps curate pieces for you!"
+    },
+    {
+      "brand": "BNTO",
+      "theme": "app_website",
+      "score": 0.9062,
+      "text": "The search engine has improved a lot since over the past several months and the new ai feature is super helpful for finding styles similar to items I like."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "app_website",
+      "score": 0.8519,
+      "text": "Love this app - bnto is great"
+    },
+    {
+      "brand": "BNTO",
+      "theme": "app_website",
+      "score": 0.8481,
+      "text": "Great app and great service overall."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "condition",
+      "score": 0.0,
+      "text": "You can actually find unique pieces, high quality brands, statement pieces, brands you may have never heard of, and SO much more."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "condition",
+      "score": 0.0,
+      "text": "Very on trend, quality pieces."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "condition",
+      "score": 0.128,
+      "text": "My last box arrived smelling musty, with a coat missing a button and a pink shirt so wrinkled it was clearly never dry cleaned \u2014 it also had a crusty stain on it."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "condition",
+      "score": 0.3291,
+      "text": "I recently started using the BNTO app and it\u2019s a game changer for anyone who loves fashion but wants to be more sustainable."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "condition",
+      "score": 0.9771,
+      "text": "I am a sucker for these subscriptions - I love finding new brands and this is a great way - let me Say, I think BNTO has the best box out there right now for women's apparel & some\u2026"
+    },
+    {
+      "brand": "BNTO",
+      "theme": "condition",
+      "score": 0.836,
+      "text": "Each item I received was in excellent condition and I love the variety."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "condition",
+      "score": 0.8126,
+      "text": "This is the perfect subscription for someone who loves high quality pieces and switching up their style every month."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "condition",
+      "score": 0.784,
+      "text": "The quality of the product is excellent and the S&R process is easy and quick!"
+    },
+    {
+      "brand": "BNTO",
+      "theme": "delivery",
+      "score": -0.2732,
+      "text": "If you\u2019ve used other services they might offer pharmacy or UPS pickup and drop off, for this service you will need to take your package to a US postal office in order to return it."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "delivery",
+      "score": 0.0,
+      "text": "I see a lot of reviews about items being sold out or longer waits for shipping."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "delivery",
+      "score": 0.0,
+      "text": "I also had an issue with the delivery carrier of my items and their team made it right within 24 hours of my initial email."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "delivery",
+      "score": 0.0,
+      "text": "After you place an order it takes 5+ days to arrive."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "delivery",
+      "score": 0.9771,
+      "text": "I am a sucker for these subscriptions - I love finding new brands and this is a great way - let me Say, I think BNTO has the best box out there right now for women's apparel & some\u2026"
+    },
+    {
+      "brand": "BNTO",
+      "theme": "delivery",
+      "score": 0.807,
+      "text": "You can now buy new which is great and organizing your wishlist into different capsules makes it easy to go back and select what\u2019s available when actually building my box!"
+    },
+    {
+      "brand": "BNTO",
+      "theme": "delivery",
+      "score": 0.7603,
+      "text": "Every item I\u2019ve rented has come exactly how I expected, they ship everything so fast and make it so easy to return, + I feel like it\u2019s more affordable than other options out there!"
+    },
+    {
+      "brand": "BNTO",
+      "theme": "delivery",
+      "score": 0.7506,
+      "text": "Great styles, but shipping and app UX could improve."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "fit_sizing",
+      "score": 0.1761,
+      "text": "The app is a little weird because you\u2019ll have to toggle which clothes are actually in stock as well as in your size, which wasn\u2019t much for me."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "fit_sizing",
+      "score": 0.5859,
+      "text": "amazing fits."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "fit_sizing",
+      "score": 0.7003,
+      "text": "Longer authentication so I don\u2019t have to log in constantly, better filters to show items that are available in my size from my wishlist, and a better UI for understanding when in n\u2026"
+    },
+    {
+      "brand": "BNTO",
+      "theme": "fit_sizing",
+      "score": 0.8225,
+      "text": "Spent tons of time picking out a bunch of cool stuff, but out of probably 150+ different items I saved to capsules from a multitude of brands, maybe 20 were actually available to r\u2026"
+    },
+    {
+      "brand": "BNTO",
+      "theme": "fit_sizing",
+      "score": 0.8908,
+      "text": "There\u2019s truly something for everyone and I\u2019ve had such good luck reading reviews to figure out sizes to order or how things fit!"
+    },
+    {
+      "brand": "BNTO",
+      "theme": "pricing",
+      "score": -0.4902,
+      "text": "For BNTO\u2019s premium cost, the app is really lacking :("
+    },
+    {
+      "brand": "BNTO",
+      "theme": "pricing",
+      "score": -0.2508,
+      "text": "Not the end of the world especially because the price is quite good but a bit annoying and pre planning / buffed is def needed if you want to rent for events."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "pricing",
+      "score": 0.0,
+      "text": "Also, the sort from $ high-low does not work."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "pricing",
+      "score": 0.0,
+      "text": "10/10 service and subscription price."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "pricing",
+      "score": 0.9771,
+      "text": "I am a sucker for these subscriptions - I love finding new brands and this is a great way - let me Say, I think BNTO has the best box out there right now for women's apparel & some\u2026"
+    },
+    {
+      "brand": "BNTO",
+      "theme": "pricing",
+      "score": 0.8225,
+      "text": "Spent tons of time picking out a bunch of cool stuff, but out of probably 150+ different items I saved to capsules from a multitude of brands, maybe 20 were actually available to r\u2026"
+    },
+    {
+      "brand": "BNTO",
+      "theme": "pricing",
+      "score": 0.7841,
+      "text": "The subscription price feels fair for what you get, and I really appreciate the $20 monthly credit you can use toward purchases."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "pricing",
+      "score": 0.7603,
+      "text": "Every item I\u2019ve rented has come exactly how I expected, they ship everything so fast and make it so easy to return, + I feel like it\u2019s more affordable than other options out there!"
+    },
+    {
+      "brand": "BNTO",
+      "theme": "selection",
+      "score": -0.1027,
+      "text": "It\u2019s frustrating and makes the app feel like it\u2019s being run more by AI than by actual inventory accuracy."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "selection",
+      "score": 0.0,
+      "text": "Their app is also insanely glitchy and it lacks any of the filtering options that the other clothing rental apps have, so you spend a ton of time scrolling."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "selection",
+      "score": 0.0,
+      "text": "The rental options are much more my style compared to other rental companies."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "selection",
+      "score": 0.0,
+      "text": "For starters, the designers are all emerging brands that I would otherwise not know about or have little access to."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "selection",
+      "score": 0.9062,
+      "text": "They carry some of my favorite brands - frankie\u2019s bikinis, geel, peachy den + other awesome designers that I was able to try out and now love."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "selection",
+      "score": 0.9062,
+      "text": "The search engine has improved a lot since over the past several months and the new ai feature is super helpful for finding styles similar to items I like."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "selection",
+      "score": 0.8768,
+      "text": "I am a person who constantly changes my style up so having the opportunity to rent and give back is great <3"
+    },
+    {
+      "brand": "BNTO",
+      "theme": "selection",
+      "score": 0.836,
+      "text": "Each item I received was in excellent condition and I love the variety."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "service",
+      "score": 0.0,
+      "text": "I also had an issue with the delivery carrier of my items and their team made it right within 24 hours of my initial email."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "service",
+      "score": 0.3818,
+      "text": "They also have curated collections for different occasions and an AI chat that helps you look for specific types of items."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "service",
+      "score": 0.6239,
+      "text": "Amazing customer service!."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "service",
+      "score": 0.6588,
+      "text": "BNTO also has a great customer service team!"
+    },
+    {
+      "brand": "BNTO",
+      "theme": "service",
+      "score": 0.9771,
+      "text": "I am a sucker for these subscriptions - I love finding new brands and this is a great way - let me Say, I think BNTO has the best box out there right now for women's apparel & some\u2026"
+    },
+    {
+      "brand": "BNTO",
+      "theme": "service",
+      "score": 0.9062,
+      "text": "The search engine has improved a lot since over the past several months and the new ai feature is super helpful for finding styles similar to items I like."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "service",
+      "score": 0.8979,
+      "text": "The new AI feature is super helpful for discovering products \u2014 I love how it also suggests full looks."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "service",
+      "score": 0.7717,
+      "text": "I found using push notifications super helpful in reminding myself when my due dates were and it\u2019s helped me curate my wishlist in advance"
+    },
+    {
+      "brand": "BNTO",
+      "theme": "subscription",
+      "score": -0.4939,
+      "text": "No QA was done, and I cancelled as a result."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "subscription",
+      "score": -0.4215,
+      "text": "However, I can only assume that a lot of potential subscribers are experiencing the same and taking their money to Nuuly, which is a bummer because your clothes are 100x better \ud83d\ude22"
+    },
+    {
+      "brand": "BNTO",
+      "theme": "subscription",
+      "score": -0.3182,
+      "text": "Nothing ever in stock, they sent me the wrong items, nicer items are an extra charge to rent- and these extra charges are high."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "subscription",
+      "score": 0.0,
+      "text": "10/10 service and subscription price."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "subscription",
+      "score": 0.9771,
+      "text": "I am a sucker for these subscriptions - I love finding new brands and this is a great way - let me Say, I think BNTO has the best box out there right now for women's apparel & some\u2026"
+    },
+    {
+      "brand": "BNTO",
+      "theme": "subscription",
+      "score": 0.9001,
+      "text": "The best part is you CAN purchase items that you love and you get a credit for every month you rent that you can use for a later purchase."
+    },
+    {
+      "brand": "BNTO",
+      "theme": "subscription",
+      "score": 0.8832,
+      "text": "I also love the credit system to eventually save up to keep a piece!"
+    },
+    {
+      "brand": "BNTO",
+      "theme": "subscription",
+      "score": 0.8439,
+      "text": "I love that you get monthly credits that can be used towards future purchases or item upgrades as well!"
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "app_website",
+      "score": -0.5345,
+      "text": "They have a nice selection of clothing options but the app and its general UI SUCKS."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "app_website",
+      "score": -0.4767,
+      "text": "App is broken rn."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "app_website",
+      "score": -0.4767,
+      "text": "App is constantly crashing, terrible interface issues, the overall design feels dated and old."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "app_website",
+      "score": -0.4019,
+      "text": "Also, the recent update hided the maternity page even deeper in the app, and it is annoying to find."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "app_website",
+      "score": 0.8957,
+      "text": "The app should allow you to favorite your size as well to make renting easier from your favorite page."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "app_website",
+      "score": 0.7959,
+      "text": "But I will say, I love Nuuly so much and will continue to use it despite these bugs!"
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "app_website",
+      "score": 0.6908,
+      "text": "Could be easy fix and would make the searching much easier"
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "app_website",
+      "score": 0.6369,
+      "text": "Would love to use the phone app."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "condition",
+      "score": -0.4939,
+      "text": "The only downside is you don\u2019t know the quality of the item or how many times it\u2019s been worn before you receive it"
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "condition",
+      "score": -0.4404,
+      "text": "And sometimes the clothes are so misshapen or shrunken or damaged."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "condition",
+      "score": 0.0,
+      "text": "Soft buttery but not yellow color and fabric."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "condition",
+      "score": 0.0,
+      "text": "Sustainable fashion."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "condition",
+      "score": 0.9322,
+      "text": "Fabulous customer service, clean clothes, I love how open everyone is in the reviews (makes figuring out sizing much easier) and so stylish!!!"
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "condition",
+      "score": 0.6369,
+      "text": "I just love how much time this saves me shopping online because of the recommendations and also dry cleaning things so that they look new."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "condition",
+      "score": 0.6114,
+      "text": "It came new with tags, and in perfect condition!"
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "condition",
+      "score": 0.34,
+      "text": "I find quality pieces that get delivered to my home that make me excited for fashion again."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "delivery",
+      "score": 0.0,
+      "text": "Just placed another order and I can\u2019t wait for it to arrive!!"
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "delivery",
+      "score": 0.0,
+      "text": "Shipping is so fast."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "delivery",
+      "score": 0.0,
+      "text": "it takes about a week for it to arrive after ordering it."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "delivery",
+      "score": 0.0,
+      "text": "Nuuly arrives very wrinkled.."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "delivery",
+      "score": 0.9305,
+      "text": "I never write these but feel compelled - their customer service, process, shipping, returns\u2026 every aspect is so easy and I feel so sophisticated with the selections."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "delivery",
+      "score": 0.34,
+      "text": "I find quality pieces that get delivered to my home that make me excited for fashion again."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "fit_sizing",
+      "score": -0.2755,
+      "text": "However, the app keeps recommending regular clothing that won't fit my baby bump, even after I ordered maternity clothing."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "fit_sizing",
+      "score": 0.0,
+      "text": "It runs really big so size down."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "fit_sizing",
+      "score": 0.0,
+      "text": "Sizing filter needs fixing."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "fit_sizing",
+      "score": 0.0,
+      "text": "Runs large so size down a size or even 2."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "fit_sizing",
+      "score": 0.9322,
+      "text": "Fabulous customer service, clean clothes, I love how open everyone is in the reviews (makes figuring out sizing much easier) and so stylish!!!"
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "fit_sizing",
+      "score": 0.9317,
+      "text": "These are so cute easy to style and great fit and color!"
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "fit_sizing",
+      "score": 0.899,
+      "text": "I wish there was a better system for when you don\u2019t like something or it doesn\u2019t fit but overall I have had a great experience and been a member for years."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "fit_sizing",
+      "score": 0.8957,
+      "text": "The app should allow you to favorite your size as well to make renting easier from your favorite page."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "pricing",
+      "score": 0.0,
+      "text": "It give that retail therapy fix but for a fraction of the cost."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "pricing",
+      "score": 0.2263,
+      "text": "Worth every penny."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "pricing",
+      "score": 0.3593,
+      "text": "It is so worth it to me"
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "pricing",
+      "score": 0.3612,
+      "text": "I tried other company\u2019s and didn\u2019t like the style at picking things out and more expensive."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "pricing",
+      "score": 0.4549,
+      "text": "I get so many compliments on my cloths on clothes I would never be able to afford."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "selection",
+      "score": -0.5345,
+      "text": "They have a nice selection of clothing options but the app and its general UI SUCKS."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "selection",
+      "score": -0.101,
+      "text": "It\u2019s very hard to find a full 6 styles you want."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "selection",
+      "score": 0.0,
+      "text": "Nuuly was a game changer in style for me."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "selection",
+      "score": 0.0,
+      "text": "I can branch out without spending a paycheck on a design choice."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "selection",
+      "score": 0.9317,
+      "text": "These are so cute easy to style and great fit and color!"
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "selection",
+      "score": 0.9305,
+      "text": "I never write these but feel compelled - their customer service, process, shipping, returns\u2026 every aspect is so easy and I feel so sophisticated with the selections."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "selection",
+      "score": 0.8316,
+      "text": "The customer service is wonderful and they have a great selection of items."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "selection",
+      "score": 0.7727,
+      "text": "I love that I don\u2019t have to buy things and I\u2019m a little more daring when I make choices because of it."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "service",
+      "score": -0.0516,
+      "text": "Good customer service terrible UX."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "service",
+      "score": 0.2023,
+      "text": "Their customer service is top tier."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "service",
+      "score": 0.4019,
+      "text": "If ever an issue customer service is always there to help."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "service",
+      "score": 0.5859,
+      "text": "The items that I\u2019ve bought are staples in my closet and the customer service is amazing."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "service",
+      "score": 0.9322,
+      "text": "Fabulous customer service, clean clothes, I love how open everyone is in the reviews (makes figuring out sizing much easier) and so stylish!!!"
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "service",
+      "score": 0.9305,
+      "text": "I never write these but feel compelled - their customer service, process, shipping, returns\u2026 every aspect is so easy and I feel so sophisticated with the selections."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "service",
+      "score": 0.8316,
+      "text": "The customer service is wonderful and they have a great selection of items."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "service",
+      "score": 0.7096,
+      "text": "And their customer service care to help you with that"
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "subscription",
+      "score": 0.4404,
+      "text": "There are better clothing subscription apps out there."
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "subscription",
+      "score": 0.8777,
+      "text": "This is the best subscription clothing rental and I recommend it to all my friends!"
+    },
+    {
+      "brand": "Nuuly",
+      "theme": "subscription",
+      "score": 0.899,
+      "text": "I wish there was a better system for when you don\u2019t like something or it doesn\u2019t fit but overall I have had a great experience and been a member for years."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "app_website",
+      "score": -0.8934,
+      "text": "Now I have to wait five days to get my money back there\u2019s nothing available that matches my vet\u2026 And they could give a little bit if any sympathy at all awful awful customer servic\u2026"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "app_website",
+      "score": -0.872,
+      "text": "They picked up my item, confirmed by text the item was picked up, have it listed as received by the company in my app but continue to harass me daily to return the dress and are th\u2026"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "app_website",
+      "score": -0.8519,
+      "text": "But the app is broken and has been broken for months and I can't believe this latest update didn't fix it."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "app_website",
+      "score": -0.802,
+      "text": "No one should be forced to perform a task on an app/website and be punished for not completing the task."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "app_website",
+      "score": 0.8842,
+      "text": "This app would be truly AMAZING if the items were tagged better and searching yielded more results."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "app_website",
+      "score": 0.873,
+      "text": "RTR has great filter options but what I wouldn\u2019t give to just be able to select Soft Summer and see all the clothes in the color palette best suited for me!!"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "app_website",
+      "score": 0.8658,
+      "text": "2) Ensure hearts (liked items) can be filtered by date added."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "app_website",
+      "score": 0.8613,
+      "text": "The app is also very easy to use, and customer service very helpful :)"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "condition",
+      "score": -0.8949,
+      "text": "Not worth the 140$ you pay for low quality clothing and bad service (I got damaged items more than twice, with no refund considered)."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "condition",
+      "score": -0.891,
+      "text": "After a few months of receiving defective (missing zippers, uneven lining, too-short-for-size sleeves or legs, etc.) that more than once had a cigarette stench and receiving no ass\u2026"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "condition",
+      "score": -0.8748,
+      "text": "They reject any reviews that are remotely negative (I mentioned that a fabric was polyester and they rejected the review!), which is really unhelpful and deceptive."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "condition",
+      "score": -0.8625,
+      "text": "But to my disappointment the clothes were in poor condition."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "condition",
+      "score": 0.9042,
+      "text": "They also need to improve their buying team, people who truly understand quality, fit, and style, to ensure the clothing is more consistently well-made and flattering."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "condition",
+      "score": 0.8625,
+      "text": "A lovely sequin gown I was going to wear smelled like strong BO (body odor) in the arm pit area."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "condition",
+      "score": 0.8622,
+      "text": "I\u2019ve been a member for two years and I love having access to new clothes, great designers and dry cleaning!"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "condition",
+      "score": 0.8478,
+      "text": "Gorgeous quality - arrived early - beautiful dress!"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "delivery",
+      "score": -0.872,
+      "text": "They picked up my item, confirmed by text the item was picked up, have it listed as received by the company in my app but continue to harass me daily to return the dress and are th\u2026"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "delivery",
+      "score": -0.836,
+      "text": "Horrible horrible experience they lie to you about when things are delivered and say it\u2019s your fault that you can\u2019t see the backend- said delivery to on Friday night Saturday night\u2026"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "delivery",
+      "score": -0.8176,
+      "text": "Many times I\u2019ve received damaged items, shipments arrive late where I\u2019ve missed what I ordered for vacation and customer service just throws extra spots at you as a \u201csolution\u201d when\u2026"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "delivery",
+      "score": -0.787,
+      "text": "Two months ago I went to the dress in two different sizes three days before the event they sent me an email that the dress would not be delivered and that if I needed another dress\u2026"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "delivery",
+      "score": 0.91,
+      "text": "Please add an option to heart favorite designers and see newest arrivals from favorite designers."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "delivery",
+      "score": 0.9022,
+      "text": "The concept is great and the return process is pretty easy, so it could be worth trying if you are more patient and less picky than I am."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "delivery",
+      "score": 0.8555,
+      "text": "I love that I have variety delivered to my door and can choose which works best in the privacy of my home."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "delivery",
+      "score": 0.8516,
+      "text": "I loved the dress and the early delivery allowed me to try it on days before the wedding to ensure I had the right fit for the wedding!"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "fit_sizing",
+      "score": -0.891,
+      "text": "After a few months of receiving defective (missing zippers, uneven lining, too-short-for-size sleeves or legs, etc.) that more than once had a cigarette stench and receiving no ass\u2026"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "fit_sizing",
+      "score": -0.787,
+      "text": "Two months ago I went to the dress in two different sizes three days before the event they sent me an email that the dress would not be delivered and that if I needed another dress\u2026"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "fit_sizing",
+      "score": -0.765,
+      "text": "If something you rented fits wrong, then too bad."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "fit_sizing",
+      "score": -0.7587,
+      "text": "I called in earlier today in a panic, because my birthday is coming up later this week and was upset my dress I ordered online did not fit, and had no dress for my dinner or party."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "fit_sizing",
+      "score": 0.9153,
+      "text": "I loved using the reviews to help me find a perfect fit."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "fit_sizing",
+      "score": 0.9152,
+      "text": "I love getting dressed up everyday and this is perfect for trying the trends and also discovering brands that fit me so well."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "fit_sizing",
+      "score": 0.9089,
+      "text": "The dress was gorgeous size size was perfect and it was so easy to do"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "fit_sizing",
+      "score": 0.9073,
+      "text": "I would recommend sizing up a little as this dress ran small, but I got so many compliments on how beautiful it was!"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "pricing",
+      "score": -0.8949,
+      "text": "Not worth the 140$ you pay for low quality clothing and bad service (I got damaged items more than twice, with no refund considered)."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "pricing",
+      "score": -0.872,
+      "text": "They picked up my item, confirmed by text the item was picked up, have it listed as received by the company in my app but continue to harass me daily to return the dress and are th\u2026"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "pricing",
+      "score": -0.8313,
+      "text": "I spend $300 a month on RTR for clothing and very disappointed about their lack of ownership in poor communication and making this my financial responsibility."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "pricing",
+      "score": -0.765,
+      "text": "More than a month later I\u2019m still getting emails threatening to charge me full price of all stolen items if I don\u2019t \u201creturn\u201d them."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "pricing",
+      "score": 0.9136,
+      "text": "Loved the promptness, loved the service and loved the price"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "pricing",
+      "score": 0.9022,
+      "text": "The concept is great and the return process is pretty easy, so it could be worth trying if you are more patient and less picky than I am."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "pricing",
+      "score": 0.8779,
+      "text": "Kept us well dressed and was super convenient for our busy social lives at an awesome price."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "pricing",
+      "score": 0.8674,
+      "text": "I\u2019m I wish I had a better review to give but this membership isn\u2019t as good as it seems\u2026not enough inventory is available to make the monthly rental worthwhile."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "selection",
+      "score": -0.787,
+      "text": "Two months ago I went to the dress in two different sizes three days before the event they sent me an email that the dress would not be delivered and that if I needed another dress\u2026"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "selection",
+      "score": -0.7535,
+      "text": "I\u2019ve been a RTR Unlimited subscriber for years and they have always have had problems with inventory but it has gotten substantially worse."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "selection",
+      "score": -0.7506,
+      "text": "It\u2019s also odd the selections they include as \u201cdate night.\u201d No one on the planet would categorize a shapeless utility t-shirt dress as \u201cdate night.\u201d Worthless app as far as I\u2019m conc\u2026"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "selection",
+      "score": -0.7146,
+      "text": "Constantly logs me out of my account even when i opt to stay logged in Freezes up causing me to lose my place when searching for items frequently No back button when you click into\u2026"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "selection",
+      "score": 0.921,
+      "text": "I would like if the selection was better, but it\u2019s pretty good.I really appreciate being able to take a chance on designer items that aren\u2019t \u201csafe\u201d buys since it\u2019s not committing."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "selection",
+      "score": 0.9194,
+      "text": "I give it two stars because great for weddings (even though I\u2019m getting to the point where I\u2019m exhausting my options) but l honestly wouldn\u2019t recommend it anymore."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "selection",
+      "score": 0.9191,
+      "text": "Through the years, whether it\u2019s the perfect style for a wedding, corporate event, or girls trip, Rent the runway has always been my BFF to find the perfect outfit."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "selection",
+      "score": 0.9152,
+      "text": "I love getting dressed up everyday and this is perfect for trying the trends and also discovering brands that fit me so well."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "service",
+      "score": -0.8977,
+      "text": "Really disappointed with where RTR has gone now - terrible customer experience and horrific customer service."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "service",
+      "score": -0.8934,
+      "text": "Now I have to wait five days to get my money back there\u2019s nothing available that matches my vet\u2026 And they could give a little bit if any sympathy at all awful awful customer servic\u2026"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "service",
+      "score": -0.891,
+      "text": "After a few months of receiving defective (missing zippers, uneven lining, too-short-for-size sleeves or legs, etc.) that more than once had a cigarette stench and receiving no ass\u2026"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "service",
+      "score": -0.8748,
+      "text": "They reject any reviews that are remotely negative (I mentioned that a fabric was polyester and they rejected the review!), which is really unhelpful and deceptive."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "service",
+      "score": 0.8779,
+      "text": "I have been a loyal Rent the Runway member since before COVID, and I can honestly say the level of customer service I\u2019ve received over the years has been outstanding."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "service",
+      "score": 0.8777,
+      "text": "I slayed my look and thank you for such a wonderful experience and fantastic customer service!"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "service",
+      "score": 0.8683,
+      "text": "I contacted support and was told to upgrade for more options, great job RTR appreciate the full transparency."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "service",
+      "score": 0.8613,
+      "text": "The app is also very easy to use, and customer service very helpful :)"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "subscription",
+      "score": -0.8949,
+      "text": "Not worth the 140$ you pay for low quality clothing and bad service (I got damaged items more than twice, with no refund considered)."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "subscription",
+      "score": -0.891,
+      "text": "After a few months of receiving defective (missing zippers, uneven lining, too-short-for-size sleeves or legs, etc.) that more than once had a cigarette stench and receiving no ass\u2026"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "subscription",
+      "score": -0.872,
+      "text": "They picked up my item, confirmed by text the item was picked up, have it listed as received by the company in my app but continue to harass me daily to return the dress and are th\u2026"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "subscription",
+      "score": -0.8176,
+      "text": "Many times I\u2019ve received damaged items, shipments arrive late where I\u2019ve missed what I ordered for vacation and customer service just throws extra spots at you as a \u201csolution\u201d when\u2026"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "subscription",
+      "score": 0.8779,
+      "text": "I have been a loyal Rent the Runway member since before COVID, and I can honestly say the level of customer service I\u2019ve received over the years has been outstanding."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "subscription",
+      "score": 0.8674,
+      "text": "I\u2019m I wish I had a better review to give but this membership isn\u2019t as good as it seems\u2026not enough inventory is available to make the monthly rental worthwhile."
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "subscription",
+      "score": 0.8622,
+      "text": "I\u2019ve been a member for two years and I love having access to new clothes, great designers and dry cleaning!"
+    },
+    {
+      "brand": "Rent the Runway",
+      "theme": "subscription",
+      "score": 0.8402,
+      "text": "When creating an account and moving between browser & mobile, be super careful about the return date because if it gets updated and you don\u2019t triple check, the late fees are huge a\u2026"
+    }
+  ]
+}

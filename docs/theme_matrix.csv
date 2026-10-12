@@ -1,0 +1,25 @@
+brand,theme,n,mean
+Brand A,fit_sizing,2,0.59325
+Brand A,condition_quality,3,0.5613333333333334
+Brand A,delivery_returns,3,0.1468
+Brand A,selection_style,4,0.44557500000000005
+Brand A,pricing_value,2,0.4256
+Brand A,subscription,1,0.5859
+Brand A,customer_service,2,0.3243
+Brand A,app_website,2,0.2202
+Brand B,fit_sizing,3,0.21989999999999998
+Brand B,condition_quality,2,0.61215
+Brand B,delivery_returns,2,0.0
+Brand B,selection_style,3,-0.0593
+Brand B,pricing_value,4,0.2699
+Brand B,subscription,3,0.07306666666666665
+Brand B,customer_service,1,0.4215
+Brand B,app_website,1,-0.2263
+Brand C,fit_sizing,1,-0.2755
+Brand C,condition_quality,3,-0.29919999999999997
+Brand C,delivery_returns,5,-0.18134
+Brand C,selection_style,2,0.29295
+Brand C,pricing_value,5,-0.11063999999999999
+Brand C,subscription,1,-0.2023
+Brand C,customer_service,2,-0.028450000000000003
+Brand C,app_website,1,0.0
