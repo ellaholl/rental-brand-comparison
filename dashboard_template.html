@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nuuly vs BNTO vs Rent the Runway: Review Sentiment Dashboard</title>
+<style>
+:root{
+  --bg:#f5f7fa; --card:#ffffff; --text:#14202b; --muted:#5d6b78; --line:#e1e6ec;
+  --pos:#2faa98; --neg:#d9534f; --neu:#aab4be; --accent:#2f6f8f; --warn:#c98b3a;
+  --shadow:0 1px 2px rgba(20,32,43,.06),0 6px 20px rgba(20,32,43,.05);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1620; --card:#16222f; --text:#e8eef4; --muted:#93a3b3; --line:#243445;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e1620; --card:#16222f; --text:#e8eef4; --muted:#93a3b3; --line:#243445;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--text);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.hero{background:linear-gradient(135deg,#17324d,#2f6f8f 55%,#7fd1c7);color:#fff;padding:36px 24px 70px}
+.wrap{max-width:1120px;margin:0 auto}
+.hero h1{margin:0 0 6px;font-size:28px;letter-spacing:-.01em}
+.hero p{margin:0;opacity:.88}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.pill{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:3px 12px;font-size:12.5px}
+.toggle{float:right;background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:8px;padding:5px 12px;cursor:pointer;font-size:13px}
+main{max-width:1120px;margin:-44px auto 40px;padding:0 24px}
+.banner{background:#fff3d6;color:#6a4a00;border:1px solid #f0d28a;border-radius:12px;padding:10px 16px;margin-bottom:18px;font-size:14px}
+.grid{display:grid;gap:18px}
+.kpis{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-bottom:18px}
+.two{grid-template-columns:repeat(auto-fit,minmax(420px,1fr))}
+@media(max-width:520px){.two{grid-template-columns:1fr}}
+.card{background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:20px 22px;border:1px solid var(--line);min-width:0}
+.card h2{margin:0 0 2px;font-size:16px}
+.card .sub{color:var(--muted);font-size:13px;margin:0 0 14px}
+.section{margin-top:18px}
+.kpi{border-top:5px solid var(--c)}
+.kpi .name{font-weight:650;font-size:17px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.kpi .big{font-size:34px;font-weight:700;letter-spacing:-.02em;margin:6px 0 0}
+.kpi .ci{color:var(--muted);font-size:12.5px}
+.kpi .row{display:flex;gap:18px;margin-top:12px;font-size:13px;color:var(--muted)}
+.kpi .row b{display:block;color:var(--text);font-size:16px}
+.badge{font-size:11.5px;border-radius:999px;padding:2px 9px;background:rgba(201,139,58,.16);color:var(--warn);border:1px solid rgba(201,139,58,.4);white-space:nowrap}
+.badge.ok{background:rgba(47,170,152,.14);color:var(--pos);border-color:rgba(47,170,152,.4)}
+svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{fill:var(--muted);font-size:12px;font-family:inherit}
+svg .lbl{fill:var(--text);font-weight:600;font-size:13px}
+.grid-line{stroke:var(--line);stroke-width:1}
+.zero-line{stroke:var(--muted);stroke-width:1.2;stroke-dasharray:3 3}
+.stack{display:flex;height:30px;border-radius:8px;overflow:hidden;background:var(--line)}
+.stack div{display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:600;min-width:0}
+.srow{display:grid;grid-template-columns:130px 1fr;gap:10px;align-items:center;margin-bottom:12px;font-size:13.5px}
+.srow .nm{font-weight:600}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;color:var(--muted);margin-top:8px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.scroll{overflow-x:auto}
+table{border-collapse:separate;border-spacing:4px;width:100%;font-size:13.5px}
+th{font-weight:600;color:var(--muted);text-align:center;padding:4px 6px;font-size:12.5px}
+th.l,td.l{text-align:left}
+td.cell{text-align:center;border-radius:8px;padding:10px 6px;min-width:96px}
+td.cell small{display:block;color:var(--muted);font-size:11px}
+td.cell.low{opacity:.5;outline:1.5px dashed var(--muted);outline-offset:-3px}
+td.cell.none{background:var(--line);color:var(--muted)}
+.tbl{border-spacing:0}
+.tbl th,.tbl td{border-bottom:1px solid var(--line);padding:10px 8px;text-align:left}
+.tbl td.r,.tbl th.r{text-align:right;font-variant-numeric:tabular-nums}
+.chip{display:inline-block;border-radius:999px;padding:2px 10px;font-size:12px;font-weight:600;margin:2px 4px 2px 0}
+.chip.good{background:rgba(47,170,152,.15);color:var(--pos)}
+.chip.bad{background:rgba(217,83,79,.14);color:var(--neg)}
+.chip.mute{background:rgba(147,163,179,.18);color:var(--muted)}
+.chip.warn{background:rgba(201,139,58,.16);color:var(--warn)}
+.gap{display:grid;grid-template-columns:120px 1fr 90px;gap:10px;align-items:center;margin:8px 0;font-size:13px}
+.gap .bar{height:10px;border-radius:6px;background:var(--line);position:relative;overflow:hidden}
+.gap .bar i{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,#2f6f8f,#7fd1c7);border-radius:6px}
+.ctrl{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px}
+select{background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:13px}
+.ex{border-left:4px solid var(--c);padding:8px 12px;margin:8px 0;background:rgba(147,163,179,.08);border-radius:0 10px 10px 0;font-size:13.5px}
+.ex .t{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:12px;margin-bottom:2px}
+.score{border-radius:999px;padding:1px 8px;font-weight:700;font-size:12px;color:#fff}
+.stat{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+.stat div{background:rgba(147,163,179,.1);border-radius:12px;padding:10px 16px;min-width:130px}
+.stat b{display:block;font-size:22px}
+.stat span{font-size:12px;color:var(--muted)}
+.empty{color:var(--muted);font-size:13.5px;padding:8px 0}
+ul.lim{margin:0;padding-left:18px;color:var(--muted);font-size:13.5px}
+footer{color:var(--muted);font-size:12.5px;text-align:center;margin-top:26px}
+</style>
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <button class="toggle" id="themeBtn" type="button">Toggle theme</button>
+  <h1>Nuuly vs BNTO vs Rent the Runway</h1>
+  <p>Review sentiment comparison across fashion rental subscriptions</p>
+  <div class="meta" id="meta"></div>
+</div></div>
+<main>
+  <div id="banner"></div>
+  <div class="grid kpis" id="kpis"></div>
+
+  <div class="grid two">
+    <div class="card"><h2>Overall sentiment</h2>
+      <p class="sub">Mean score per review (-1 negative to +1 positive) with 95% bootstrap interval. Hollow dots mean the sample is below the minimum.</p>
+      <div id="sentChart"></div></div>
+    <div class="card"><h2>Positive, neutral, negative mix</h2>
+      <p class="sub">Share of reviews by VADER label. Net sentiment is positive minus negative.</p>
+      <div id="mix"></div>
+      <div class="legend"><span><i style="background:var(--pos)"></i>Positive</span><span><i style="background:var(--neu)"></i>Neutral</span><span><i style="background:var(--neg)"></i>Negative</span></div></div>
+  </div>
+
+  <div class="card section"><h2>Theme heatmap</h2>
+    <p class="sub">Mean sentence sentiment per theme and brand. Faded cells with a dashed outline have too few mentions to trust.</p>
+    <div class="scroll" id="heat"></div></div>
+
+  <div class="grid two section">
+    <div class="card"><h2>Biggest theme gaps</h2>
+      <p class="sub">Spread between the best and worst brand on each theme (trusted cells only).</p>
+      <div id="gaps"></div></div>
+    <div class="card"><h2>Shared problems</h2>
+      <p class="sub">Themes with negative average sentiment for every brand.</p>
+      <div id="shared"></div>
+      <h2 style="margin-top:18px">Review counts</h2>
+      <p class="sub">By brand and source.</p>
+      <div id="sources"></div></div>
+  </div>
+
+  <div class="card section"><h2>Head-to-head tests</h2>
+    <p class="sub">Difference in mean sentiment (first minus second brand) with 95% interval, permutation test p-value corrected with Holm, and Cliff's delta effect size.</p>
+    <div class="scroll" id="pairs"></div></div>
+
+  <div class="grid two section">
+    <div class="card"><h2>Sentiment over time</h2>
+      <p class="sub">Monthly mean sentiment per brand. Hover points for the review count.</p>
+      <div id="trend"></div></div>
+    <div class="card"><h2>Model validation</h2>
+      <p class="sub">How well the sentiment model agrees with your hand labels and with star ratings.</p>
+      <div id="validation"></div></div>
+  </div>
+
+  <div class="card section"><h2>Sentence explorer</h2>
+    <p class="sub">Example theme sentences, truncated. Use this to find where the keyword tagging or VADER gets it wrong.</p>
+    <div class="ctrl">
+      <select id="fBrand"></select><select id="fTheme"></select>
+      <select id="fSort"><option value="neg">Most negative first</option><option value="pos">Most positive first</option></select>
+    </div>
+    <div id="examples"></div></div>
+
+  <div class="card section"><h2>Limitations</h2>
+    <ul class="lim">
+      <li>Keyword tagging misses indirect wording, and a word can match an unrelated sentence.</li>
+      <li>VADER can misread sarcasm and mixed sentiment.</li>
+      <li>Public reviews are not a random sample of customers, and each source attracts different people.</li>
+      <li>Brands below the minimum sample size get no verdict, so their results are less certain.</li>
+    </ul></div>
+  <footer id="foot"></footer>
+</main>
+
+<script>
+const D = __DATA__;
+const PALETTE = ["#3a86b4","#e07a5f","#59c3b0","#c9a227","#9a6fb0"];
+const BRAND_COLOR = {};
+D.brands.forEach((b,i)=>BRAND_COLOR[b.brand]=PALETTE[i%PALETTE.length]);
+const THEME_LABEL = t => t.replace(/_/g," ").replace(/\b\w/g,c=>c.toUpperCase());
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const num = (v,d=2) => v==null?"–":Number(v).toFixed(d);
+const sgn = (v,d=2) => v==null?"–":(v>=0?"+":"")+Number(v).toFixed(d);
+const okBrand = b => b.status==="ok";
+const scoreColor = v => v>=0 ? `rgba(47,170,152,${Math.min(1,v*1.5)*0.85+0.08})` : `rgba(217,83,79,${Math.min(1,-v*1.5)*0.85+0.08})`;
+
+// ----- header
+(function(){
+  const m=D.meta, p=[];
+  p.push(`${m.n_reviews} reviews`);
+  p.push(`Model: ${m.model.toUpperCase()}`);
+  if(m.date_range) p.push(`${m.date_range[0]} to ${m.date_range[1]}`);
+  p.push(`Min ${m.min_n} reviews per brand`);
+  p.push(`Generated ${m.generated}`);
+  $("meta").innerHTML = p.map(x=>`<span class="pill">${esc(x)}</span>`).join("");
+  if(m.synthetic) $("banner").innerHTML = `<div class="banner"><b>Synthetic data.</b> These results come from example rows written to test the code, not real reviews.</div>`;
+  $("foot").textContent = `Built with Python, pandas and VADER. Generated ${m.generated}.`;
+})();
+
+// ----- KPI cards
+$("kpis").innerHTML = D.brands.map(b=>`
+  <div class="card kpi" style="--c:${BRAND_COLOR[b.brand]}">
+    <div class="name">${esc(b.brand)}<span class="badge ${okBrand(b)?"ok":""}">${okBrand(b)?`n = ${b.reviews}`:`n = ${b.reviews}, too few`}</span></div>
+    <div class="big" style="color:${b.mean_sentiment>=0?"var(--pos)":"var(--neg)"}">${sgn(b.mean_sentiment)}</div>
+    <div class="ci">mean sentiment, 95% CI [${num(b.ci_low)}, ${num(b.ci_high)}]</div>
+    <div class="row">
+      <div><b>${sgn(b.net_sentiment,0)}</b>net sentiment</div>
+      <div><b>${b.avg_rating==null?"–":num(b.avg_rating,1)+" ★"}</b>avg stars${b.rated_reviews?` (${b.rated_reviews})`:""}</div>
+      <div><b>${b.spearman_vs_rating==null?"–":sgn(b.spearman_vs_rating)}</b>vs stars (ρ)</div>
+    </div>
+  </div>`).join("");
+
+// ----- sentiment dot-and-whisker
+(function(){
+  const rows=D.brands, W=460, rowH=58, top=26, left=108, right=30, H=top+rows.length*rowH+8;
+  const x=v=>left+(v+1)/2*(W-left-right);
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Mean sentiment by brand">`;
+  [-1,-.5,0,.5,1].forEach(v=>{
+    s+=`<line class="${v===0?"zero-line":"grid-line"}" x1="${x(v)}" x2="${x(v)}" y1="${top-8}" y2="${H-8}"/>`;
+    s+=`<text x="${x(v)}" y="${top-12}" text-anchor="middle">${v>0?"+":""}${v}</text>`;
+  });
+  rows.forEach((b,i)=>{
+    const y=top+i*rowH+rowH/2, c=BRAND_COLOR[b.brand], solid=okBrand(b);
+    s+=`<text class="lbl" x="${left-14}" y="${y-2}" text-anchor="end">${esc(b.brand)}</text>`;
+    s+=`<text x="${left-14}" y="${y+14}" text-anchor="end">n = ${b.reviews}</text>`;
+    s+=`<g><title>${esc(b.brand)}: ${num(b.mean_sentiment)} [${num(b.ci_low)}, ${num(b.ci_high)}]</title>`;
+    if(b.ci_low!=null) s+=`<line x1="${x(b.ci_low)}" x2="${x(b.ci_high)}" y1="${y}" y2="${y}" stroke="${c}" stroke-width="4" stroke-linecap="round" ${solid?"":'stroke-dasharray="2 7"'}/>`;
+    s+=`<circle cx="${x(b.mean_sentiment)}" cy="${y}" r="9" fill="${solid?c:"var(--card)"}" stroke="${c}" stroke-width="3"/>`;
+    s+=`<text x="${x(b.mean_sentiment)}" y="${y-16}" text-anchor="middle" class="lbl">${sgn(b.mean_sentiment)}</text></g>`;
+  });
+  $("sentChart").innerHTML=s+"</svg>";
+})();
+
+// ----- mix bars
+$("mix").innerHTML = D.brands.map(b=>{
+  const seg=(v,c)=>`<div style="width:${v}%;background:${c}" title="${num(v,1)}%">${v>=9?Math.round(v)+"%":""}</div>`;
+  return `<div class="srow"><div class="nm">${esc(b.brand)}<div style="color:var(--muted);font-weight:400;font-size:12px">net ${sgn(b.net_sentiment,0)}</div></div>
+    <div class="stack">${seg(b.pct_positive,"var(--pos)")}${seg(b.pct_neutral,"var(--neu)")}${seg(b.pct_negative,"var(--neg)")}</div></div>`;
+}).join("");
+
+// ----- heatmap
+(function(){
+  const brands=D.brands.map(b=>b.brand), cell={};
+  D.matrix.forEach(r=>cell[r.brand+"|"+r.theme]=r);
+  let h=`<table><thead><tr><th class="l">Theme</th>${brands.map(b=>`<th><span style="color:${BRAND_COLOR[b]}">●</span> ${esc(b)}</th>`).join("")}</tr></thead><tbody>`;
+  D.themes.forEach(t=>{
+    h+=`<tr><th class="l" style="color:var(--text)">${THEME_LABEL(t)}</th>`;
+    brands.forEach(b=>{
+      const r=cell[b+"|"+t];
+      if(!r) h+=`<td class="cell none">–<small>no mentions</small></td>`;
+      else h+=`<td class="cell ${r.low_n?"low":""}" style="background:${scoreColor(r.mean_sentiment)}" title="${esc(b)} / ${THEME_LABEL(t)}: ${num(r.mean_sentiment)} [${num(r.ci_low)}, ${num(r.ci_high)}], ${num(r.pct_negative,0)}% negative">
+        <b>${sgn(r.mean_sentiment)}</b><small>${r.mentions} mention${r.mentions===1?"":"s"}</small></td>`;
+    });
+    h+="</tr>";
+  });
+  $("heat").innerHTML=h+"</tbody></table>";
+})();
+
+// ----- gaps + shared
+(function(){
+  const by={};
+  D.matrix.filter(r=>!r.low_n).forEach(r=>(by[r.theme]=by[r.theme]||[]).push(r));
+  const gaps=Object.entries(by).filter(([,v])=>v.length>1).map(([t,v])=>{
+    v.sort((a,b)=>b.mean_sentiment-a.mean_sentiment);
+    return {t,hi:v[0],lo:v[v.length-1],spread:v[0].mean_sentiment-v[v.length-1].mean_sentiment};
+  }).sort((a,b)=>b.spread-a.spread);
+  $("gaps").innerHTML = gaps.length ? gaps.map(g=>`
+    <div class="gap" title="Best: ${esc(g.hi.brand)} (${sgn(g.hi.mean_sentiment)}), worst: ${esc(g.lo.brand)} (${sgn(g.lo.mean_sentiment)})">
+      <div><b>${THEME_LABEL(g.t)}</b></div>
+      <div class="bar"><i style="width:${Math.min(100,g.spread/1.2*100)}%"></i></div>
+      <div style="text-align:right">${num(g.spread)}<div style="color:var(--muted);font-size:11.5px">${g.spread<0.01?"tie":esc(g.hi.brand)+" leads"}</div></div></div>`).join("")
+    : `<div class="empty">Not enough trusted theme cells to compare brands yet.</div>`;
+  $("shared").innerHTML = D.shared_weak.length
+    ? D.shared_weak.map(t=>`<span class="chip bad">${THEME_LABEL(t)}</span>`).join("")
+    : `<div class="empty">No theme is negative for every brand.</div>`;
+  const brands=D.brands.map(b=>b.brand), src=[...new Set(D.sources.map(s=>s.source))];
+  const SC=["#2f6f8f","#7fd1c7","#c9a227","#9a6fb0","#e07a5f"];
+  const max=Math.max(...brands.map(b=>D.sources.filter(s=>s.brand===b).reduce((a,s)=>a+s.reviews,0)),1);
+  $("sources").innerHTML = brands.map(b=>{
+    const parts=D.sources.filter(s=>s.brand===b), tot=parts.reduce((a,s)=>a+s.reviews,0);
+    return `<div class="srow"><div class="nm">${esc(b)}<div style="color:var(--muted);font-weight:400;font-size:12px">${tot} reviews</div></div>
+      <div class="stack" style="width:${tot/max*100}%;min-width:40px">${parts.map(p=>`<div style="width:${p.reviews/tot*100}%;background:${SC[src.indexOf(p.source)%SC.length]}" title="${esc(p.source)}: ${p.reviews}">${p.reviews/tot>=.15?p.reviews:""}</div>`).join("")}</div></div>`;
+  }).join("") + `<div class="legend">${src.map((s,i)=>`<span><i style="background:${SC[i%SC.length]}"></i>${esc(s)}</span>`).join("")}</div>`;
+})();
+
+// ----- pairs table
+(function(){
+  const mini=(r)=>{
+    if(r.mean_diff_a_minus_b==null) return "";
+    const W=140,x=v=>(Math.max(-1,Math.min(1,v))+1)/2*W;
+    return `<svg viewBox="0 0 ${W} 18" style="width:140px"><line class="grid-line" x1="${x(0)}" x2="${x(0)}" y1="0" y2="18"/>
+      <line x1="${x(r.ci_low)}" x2="${x(r.ci_high)}" y1="9" y2="9" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="${x(r.mean_diff_a_minus_b)}" cy="9" r="5" fill="var(--accent)"/></svg>`;
+  };
+  const chip=v=>/higher/.test(v)?"good":/no verdict/.test(v)?"warn":"mute";
+  if(!D.pairs.length){ $("pairs").innerHTML=`<div class="empty">Only one brand in the data, so there is nothing to compare.</div>`; return; }
+  $("pairs").innerHTML=`<table class="tbl"><thead><tr><th>Comparison</th><th class="r">Difference</th><th>95% interval</th><th class="r">Holm p</th><th class="r">Cliff's δ</th><th>Verdict</th></tr></thead><tbody>${
+    D.pairs.map(r=>`<tr>
+      <td><b>${esc(r.brand_a)}</b> vs <b>${esc(r.brand_b)}</b><div style="color:var(--muted);font-size:12px">n = ${r.n_a} / ${r.n_b}</div></td>
+      <td class="r">${sgn(r.mean_diff_a_minus_b)}</td>
+      <td>${mini(r)}<div style="color:var(--muted);font-size:11.5px">${r.ci_low==null?"":`[${num(r.ci_low)}, ${num(r.ci_high)}]`}</div></td>
+      <td class="r">${r.p_holm==null?"–":(r.p_holm<0.001?"<0.001":num(r.p_holm,3))}</td>
+      <td class="r">${sgn(r.cliffs_delta)}<div style="color:var(--muted);font-size:11.5px">${r.effect_size||""}</div></td>
+      <td><span class="chip ${chip(r.verdict)}">${esc(r.verdict)}</span></td></tr>`).join("")}</tbody></table>`;
+})();
+
+// ----- trend
+(function(){
+  const months=[...new Set(D.trend.map(t=>t.month))].sort();
+  if(months.length<2){ $("trend").innerHTML=`<div class="empty">Need reviews from at least two months to draw a trend.</div>`; return; }
+  const W=560,H=280,L=44,R=14,T=14,B=48, vals=D.trend.map(t=>t.mean);
+  let lo=Math.max(-1,Math.min(...vals,0)-0.1), hi=Math.min(1,Math.max(...vals,0)+0.1);
+  if(hi-lo<0.3){hi=Math.min(1,hi+0.15);lo=Math.max(-1,lo-0.15);}
+  const x=i=>L+i/(months.length-1)*(W-L-R), y=v=>T+(hi-v)/(hi-lo)*(H-T-B);
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Sentiment over time">`;
+  for(let k=0;k<=4;k++){const v=lo+(hi-lo)*k/4;s+=`<line class="grid-line" x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}"/><text x="${L-6}" y="${y(v)+4}" text-anchor="end">${v.toFixed(2)}</text>`;}
+  if(lo<0&&hi>0) s+=`<line class="zero-line" x1="${L}" x2="${W-R}" y1="${y(0)}" y2="${y(0)}"/>`;
+  const step=Math.ceil(months.length/8);
+  months.forEach((m,i)=>{ if(i%step===0) s+=`<text x="${x(i)}" y="${H-B+18}" text-anchor="end" transform="rotate(-35 ${x(i)} ${H-B+18})">${m}</text>`; });
+  D.brands.forEach(b=>{
+    const pts=D.trend.filter(t=>t.brand===b.brand).sort((a,c)=>a.month<c.month?-1:1), c=BRAND_COLOR[b.brand];
+    if(!pts.length) return;
+    s+=`<polyline fill="none" stroke="${c}" stroke-width="2.5" stroke-linejoin="round" points="${pts.map(p=>`${x(months.indexOf(p.month))},${y(p.mean)}`).join(" ")}"/>`;
+    pts.forEach(p=>s+=`<circle cx="${x(months.indexOf(p.month))}" cy="${y(p.mean)}" r="${Math.min(7,2.5+Math.sqrt(p.n))}" fill="${c}" opacity=".85"><title>${esc(b.brand)} ${p.month}: ${num(p.mean)} (n = ${p.n})</title></circle>`);
+  });
+  s+=`</svg><div class="legend">${D.brands.map(b=>`<span><i style="background:${BRAND_COLOR[b.brand]}"></i>${esc(b.brand)}</span>`).join("")}<span>Dot size grows with review count</span></div>`;
+  $("trend").innerHTML=s;
+})();
+
+// ----- validation
+(function(){
+  const v=D.validation||{}, el=$("validation"), parts=[];
+  if(v.accuracy_vs_hand_labels!=null){
+    parts.push(`<div class="stat"><div><b>${Math.round(v.accuracy_vs_hand_labels*100)}%</b><span>accuracy vs hand labels</span></div>
+      <div><b>${num(v.macro_f1_vs_hand_labels,2)}</b><span>macro F1</span></div>
+      <div><b>${v.hand_labeled_reviews}</b><span>hand-labeled reviews</span></div></div>`);
+    if(v.confusion){
+      const c=v.confusion, mx=Math.max(...c.matrix.flat(),1);
+      parts.push(`<table><thead><tr><th class="l">Hand label ↓ / model →</th>${c.cols.map(x=>`<th>${esc(x)}</th>`).join("")}</tr></thead><tbody>${
+        c.rows.map((r,i)=>`<tr><th class="l" style="color:var(--text)">${esc(r)}</th>${c.matrix[i].map((n,j)=>`<td class="cell" style="background:rgba(47,111,143,${0.08+0.7*n/mx});${c.rows[i]===c.cols[j]?"font-weight:700":""}">${n}</td>`).join("")}</tr>`).join("")}</tbody></table>`);
+    }
+  } else parts.push(`<div class="empty">No hand labels found. Fill in the <code>label</code> column (positive, neutral, negative) for 30 to 100 reviews to measure agreement.</div>`);
+  if(v.spearman_vs_rating_overall!=null) parts.push(`<div class="stat" style="margin-top:14px"><div><b>${sgn(v.spearman_vs_rating_overall)}</b><span>Spearman ρ vs star ratings</span></div></div>`);
+  else parts.push(`<div class="empty">No star ratings available for a rating check.</div>`);
+  el.innerHTML=parts.join("");
+})();
+
+// ----- explorer
+(function(){
+  const fb=$("fBrand"), ft=$("fTheme"), fs=$("fSort");
+  fb.innerHTML=`<option value="">All brands</option>`+D.brands.map(b=>`<option>${esc(b.brand)}</option>`).join("");
+  ft.innerHTML=`<option value="">All themes</option>`+D.themes.map(t=>`<option value="${t}">${THEME_LABEL(t)}</option>`).join("");
+  function draw(){
+    let rows=D.sentences.filter(r=>(!fb.value||r.brand===fb.value)&&(!ft.value||r.theme===ft.value));
+    rows.sort((a,b)=>fs.value==="neg"?a.score-b.score:b.score-a.score);
+    $("examples").innerHTML = rows.length ? rows.slice(0,20).map(r=>`
+      <div class="ex" style="--c:${BRAND_COLOR[r.brand]||"var(--accent)"}">
+        <div class="t"><span class="score" style="background:${r.score>=0?"var(--pos)":"var(--neg)"}">${sgn(r.score)}</span>
+        <b style="color:var(--text)">${esc(r.brand)}</b> · ${THEME_LABEL(r.theme)}</div>${esc(r.text)}</div>`).join("")
+      : `<div class="empty">No example sentences for this filter.</div>`;
+  }
+  [fb,ft,fs].forEach(e=>e.addEventListener("change",draw)); draw();
+})();
+
+$("themeBtn").addEventListener("click",()=>{
+  const r=document.documentElement, dark=getComputedStyle(r).getPropertyValue("--bg").trim()==="#0e1620";
+  r.setAttribute("data-theme",dark?"light":"dark");
+});
+</script>
+</body>
+</html>
